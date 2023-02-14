@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{68D49C01-3EE9-437B-9458-1DC78DD4A56C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DuAn</RootNamespace>
+    <AssemblyName>DuAn</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44379</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ShopController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="file\css\availability-calendar.css" />
+    <Content Include="file\css\bootstrap.css" />
+    <Content Include="file\css\font-awesome.min.css" />
+    <Content Include="file\css\ion.rangeSlider.css" />
+    <Content Include="file\css\ion.rangeSlider.skinFlat.css" />
+    <Content Include="file\css\jquerysctipttop.css" />
+    <Content Include="file\css\linearicons.css" />
+    <Content Include="file\css\magnific-popup.css" />
+    <Content Include="file\css\main.css" />
+    <Content Include="file\css\nice-select.css" />
+    <Content Include="file\css\nouislider.min.css" />
+    <Content Include="file\css\owl.carousel.css" />
+    <Content Include="file\css\themify-icons.css" />
+    <Content Include="file\fonts\fontawesome-webfont.svg" />
+    <Content Include="file\fonts\Linearicons-Free.svg" />
+    <Content Include="file\fonts\themify.svg" />
+    <Content Include="file\Image\1970sImg\1.jpg" />
+    <Content Include="file\Image\1970sImg\2.jfif" />
+    <Content Include="file\Image\1970sImg\3.jfif" />
+    <Content Include="file\Image\1970sImg\4.jpg" />
+    <Content Include="file\Image\1970sImg\5.jfif" />
+    <Content Include="file\Image\1970sImg\6.jpg" />
+    <Content Include="file\Image\1970sImg\7.jfif" />
+    <Content Include="file\Image\1970sImg\8.jpg" />
+    <Content Include="file\Image\1970sImg\9.jpg" />
+    <Content Include="file\Image\ClassicImg\1.jfif" />
+    <Content Include="file\Image\ClassicImg\2.jfif" />
+    <Content Include="file\Image\ClassicImg\3.jfif" />
+    <Content Include="file\Image\ClassicImg\4.jpg" />
+    <Content Include="file\Image\ClassicImg\5.jfif" />
+    <Content Include="file\Image\ClassicImg\6.jfif" />
+    <Content Include="file\Image\ClassicImg\7.jfif" />
+    <Content Include="file\Image\ClassicImg\8.jpg" />
+    <Content Include="file\Image\ClassicImg\9.jpg" />
+    <Content Include="file\Image\JackPurcellImg\1.jfif" />
+    <Content Include="file\Image\JackPurcellImg\2.jfif" />
+    <Content Include="file\Image\JackPurcellImg\3.jfif" />
+    <Content Include="file\Image\JackPurcellImg\4.jpg" />
+    <Content Include="file\Image\JackPurcellImg\5.jfif" />
+    <Content Include="file\Image\JackPurcellImg\6.jfif" />
+    <Content Include="file\Image\JackPurcellImg\7.jfif" />
+    <Content Include="file\Image\JackPurcellImg\8.jpg" />
+    <Content Include="file\Image\JackPurcellImg\9.jpg" />
+    <Content Include="file\Image\logo.jpg" />
+    <Content Include="file\Image\OneStarImg\1.jfif" />
+    <Content Include="file\Image\OneStarImg\2.jfif" />
+    <Content Include="file\Image\OneStarImg\3.jfif" />
+    <Content Include="file\Image\OneStarImg\4.jfif" />
+    <Content Include="file\Image\OneStarImg\5.jfif" />
+    <Content Include="file\Image\OneStarImg\6.jfif" />
+    <Content Include="file\Image\OneStarImg\7.jfif" />
+    <Content Include="file\Image\OneStarImg\8.jfif" />
+    <Content Include="file\Image\OneStarImg\9.jfif" />
+    <Content Include="file\Image\RubberImg\1.jpg" />
+    <Content Include="file\Image\RubberImg\2.jfif" />
+    <Content Include="file\Image\RubberImg\3.jfif" />
+    <Content Include="file\Image\RubberImg\4.jfif" />
+    <Content Include="file\Image\RubberImg\5.jfif" />
+    <Content Include="file\Image\RubberImg\6.jfif" />
+    <Content Include="file\Image\RubberImg\7.jfif" />
+    <Content Include="file\Image\RubberImg\8.jpg" />
+    <Content Include="file\Image\RubberImg\9.jpg" />
+    <Content Include="file\img\banner\banner-bg.jpg" />
+    <Content Include="file\img\banner\banner-img.png" />
+    <Content Include="file\img\banner\common-banner.jpg" />
+    <Content Include="file\img\banner\next.png" />
+    <Content Include="file\img\banner\prev.png" />
+    <Content Include="file\img\blog\add.jpg" />
+    <Content Include="file\img\blog\author.png" />
+    <Content Include="file\img\blog\c1.jpg" />
+    <Content Include="file\img\blog\c2.jpg" />
+    <Content Include="file\img\blog\c3.jpg" />
+    <Content Include="file\img\blog\c4.jpg" />
+    <Content Include="file\img\blog\c5.jpg" />
+    <Content Include="file\img\blog\c6.jpg" />
+    <Content Include="file\img\blog\cat-post\cat-post-1.jpg" />
+    <Content Include="file\img\blog\cat-post\cat-post-2.jpg" />
+    <Content Include="file\img\blog\cat-post\cat-post-3.jpg" />
+    <Content Include="file\img\blog\causes\causes-1.jpg" />
+    <Content Include="file\img\blog\causes\causes-2.jpg" />
+    <Content Include="file\img\blog\causes\causes-3.jpg" />
+    <Content Include="file\img\blog\feature-img1.jpg" />
+    <Content Include="file\img\blog\latest-post\l-post-1.jpg" />
+    <Content Include="file\img\blog\latest-post\l-post-2.jpg" />
+    <Content Include="file\img\blog\latest-post\l-post-3.jpg" />
+    <Content Include="file\img\blog\latest-post\l-post-4.jpg" />
+    <Content Include="file\img\blog\main-blog\m-blog-1.jpg" />
+    <Content Include="file\img\blog\main-blog\m-blog-2.jpg" />
+    <Content Include="file\img\blog\main-blog\m-blog-3.jpg" />
+    <Content Include="file\img\blog\main-blog\m-blog-4.jpg" />
+    <Content Include="file\img\blog\main-blog\m-blog-5.jpg" />
+    <Content Include="file\img\blog\next.jpg" />
+    <Content Include="file\img\blog\popular-post\post1.jpg" />
+    <Content Include="file\img\blog\popular-post\post2.jpg" />
+    <Content Include="file\img\blog\popular-post\post3.jpg" />
+    <Content Include="file\img\blog\popular-post\post4.jpg" />
+    <Content Include="file\img\blog\post-img1.jpg" />
+    <Content Include="file\img\blog\post-img2.jpg" />
+    <Content Include="file\img\blog\prev.jpg" />
+    <Content Include="file\img\brand\1.png" />
+    <Content Include="file\img\brand\2.png" />
+    <Content Include="file\img\brand\3.png" />
+    <Content Include="file\img\brand\4.png" />
+    <Content Include="file\img\brand\5.png" />
+    <Content Include="file\img\cart.jpg" />
+    <Content Include="file\img\category\c1.jpg" />
+    <Content Include="file\img\category\c2.jpg" />
+    <Content Include="file\img\category\c3.jpg" />
+    <Content Include="file\img\category\c4.jpg" />
+    <Content Include="file\img\category\c5.jpg" />
+    <Content Include="file\img\category\s-p1.jpg" />
+    <Content Include="file\img\elements\d.jpg" />
+    <Content Include="file\img\elements\disabled-check.png" />
+    <Content Include="file\img\elements\disabled-radio.png" />
+    <Content Include="file\img\elements\f1.jpg" />
+    <Content Include="file\img\elements\f2.jpg" />
+    <Content Include="file\img\elements\f3.jpg" />
+    <Content Include="file\img\elements\f4.jpg" />
+    <Content Include="file\img\elements\f5.jpg" />
+    <Content Include="file\img\elements\f6.jpg" />
+    <Content Include="file\img\elements\f7.jpg" />
+    <Content Include="file\img\elements\f8.jpg" />
+    <Content Include="file\img\elements\g1.jpg" />
+    <Content Include="file\img\elements\g2.jpg" />
+    <Content Include="file\img\elements\g3.jpg" />
+    <Content Include="file\img\elements\g4.jpg" />
+    <Content Include="file\img\elements\g5.jpg" />
+    <Content Include="file\img\elements\g6.jpg" />
+    <Content Include="file\img\elements\g7.jpg" />
+    <Content Include="file\img\elements\g8.jpg" />
+    <Content Include="file\img\elements\primary-check.png" />
+    <Content Include="file\img\elements\primary-radio.png" />
+    <Content Include="file\img\elements\success-check.png" />
+    <Content Include="file\img\elements\success-radio.png" />
+    <Content Include="file\img\exclusive.jpg" />
+    <Content Include="file\img\fav.png" />
+    <Content Include="file\img\features\f-icon1.png" />
+    <Content Include="file\img\features\f-icon2.png" />
+    <Content Include="file\img\features\f-icon3.png" />
+    <Content Include="file\img\features\f-icon4.png" />
+    <Content Include="file\img\i1.jpg" />
+    <Content Include="file\img\i2.jpg" />
+    <Content Include="file\img\i3.jpg" />
+    <Content Include="file\img\i4.jpg" />
+    <Content Include="file\img\i5.jpg" />
+    <Content Include="file\img\i6.jpg" />
+    <Content Include="file\img\i7.jpg" />
+    <Content Include="file\img\i8.jpg" />
+    <Content Include="file\img\l1.jpg" />
+    <Content Include="file\img\l2.jpg" />
+    <Content Include="file\img\l3.jpg" />
+    <Content Include="file\img\l4.jpg" />
+    <Content Include="file\img\l5.jpg" />
+    <Content Include="file\img\l6.jpg" />
+    <Content Include="file\img\l7.jpg" />
+    <Content Include="file\img\l8.jpg" />
+    <Content Include="file\img\login.jpg" />
+    <Content Include="file\img\logo.png" />
+    <Content Include="file\img\men-bg.jpg" />
+    <Content Include="file\img\ob1.jpg" />
+    <Content Include="file\img\ob2.jpg" />
+    <Content Include="file\img\ob3.jpg" />
+    <Content Include="file\img\organic-food\b1.png" />
+    <Content Include="file\img\organic-food\b2.png" />
+    <Content Include="file\img\organic-food\b3.png" />
+    <Content Include="file\img\organic-food\b4.png" />
+    <Content Include="file\img\organic-food\c1.jpg" />
+    <Content Include="file\img\organic-food\c2.jpg" />
+    <Content Include="file\img\organic-food\c3.jpg" />
+    <Content Include="file\img\organic-food\c4.jpg" />
+    <Content Include="file\img\organic-food\cd-bg.jpg" />
+    <Content Include="file\img\organic-food\cd.png" />
+    <Content Include="file\img\organic-food\ci1.jpg" />
+    <Content Include="file\img\organic-food\ci2.jpg" />
+    <Content Include="file\img\organic-food\ci3.jpg" />
+    <Content Include="file\img\organic-food\f1.jpg" />
+    <Content Include="file\img\organic-food\f2.jpg" />
+    <Content Include="file\img\organic-food\f3.jpg" />
+    <Content Include="file\img\organic-food\f4.jpg" />
+    <Content Include="file\img\organic-food\m1.png" />
+    <Content Include="file\img\organic-food\mp1.jpg" />
+    <Content Include="file\img\organic-food\mp10.jpg" />
+    <Content Include="file\img\organic-food\mp11.jpg" />
+    <Content Include="file\img\organic-food\mp12.jpg" />
+    <Content Include="file\img\organic-food\mp2.jpg" />
+    <Content Include="file\img\organic-food\mp3.jpg" />
+    <Content Include="file\img\organic-food\mp4.jpg" />
+    <Content Include="file\img\organic-food\mp5.jpg" />
+    <Content Include="file\img\organic-food\mp6.jpg" />
+    <Content Include="file\img\organic-food\mp7.jpg" />
+    <Content Include="file\img\organic-food\mp8.jpg" />
+    <Content Include="file\img\organic-food\mp9.jpg" />
+    <Content Include="file\img\organic-food\ob1.jpg" />
+    <Content Include="file\img\organic-food\ob2.jpg" />
+    <Content Include="file\img\organic-food\ob3.jpg" />
+    <Content Include="file\img\organic-food\p1.jpg" />
+    <Content Include="file\img\organic-food\p2.jpg" />
+    <Content Include="file\img\organic-food\p3.jpg" />
+    <Content Include="file\img\organic-food\p4.jpg" />
+    <Content Include="file\img\organic-food\p5.jpg" />
+    <Content Include="file\img\organic-food\p6.jpg" />
+    <Content Include="file\img\organic-food\p7.jpg" />
+    <Content Include="file\img\organic-food\p8.jpg" />
+    <Content Include="file\img\organic-food\pl1.jpg" />
+    <Content Include="file\img\organic-food\pl2.jpg" />
+    <Content Include="file\img\organic-food\pl3.jpg" />
+    <Content Include="file\img\organic-food\pl4.jpg" />
+    <Content Include="file\img\organic-food\pl5.jpg" />
+    <Content Include="file\img\organic-food\pl6.jpg" />
+    <Content Include="file\img\organic-food\pl7.jpg" />
+    <Content Include="file\img\organic-food\pl8.jpg" />
+    <Content Include="file\img\organic-food\pm.jpg" />
+    <Content Include="file\img\organic-food\q1.jpg" />
+    <Content Include="file\img\organic-food\u1.png" />
+    <Content Include="file\img\organic-food\u2.png" />
+    <Content Include="file\img\organic-food\u3.png" />
+    <Content Include="file\img\product\card.jpg" />
+    <Content Include="file\img\product\e-p1.png" />
+    <Content Include="file\img\product\next.png" />
+    <Content Include="file\img\product\p1.jpg" />
+    <Content Include="file\img\product\p2.jpg" />
+    <Content Include="file\img\product\p3.jpg" />
+    <Content Include="file\img\product\p4.jpg" />
+    <Content Include="file\img\product\p5.jpg" />
+    <Content Include="file\img\product\p6.jpg" />
+    <Content Include="file\img\product\p7.jpg" />
+    <Content Include="file\img\product\p8.jpg" />
+    <Content Include="file\img\product\prev.png" />
+    <Content Include="file\img\product\review-1.png" />
+    <Content Include="file\img\product\review-2.png" />
+    <Content Include="file\img\product\review-3.png" />
+    <Content Include="file\img\q1.jpg" />
+    <Content Include="file\img\r1.jpg" />
+    <Content Include="file\img\r10.jpg" />
+    <Content Include="file\img\r11.jpg" />
+    <Content Include="file\img\r12.jpg" />
+    <Content Include="file\img\r2.jpg" />
+    <Content Include="file\img\r3.jpg" />
+    <Content Include="file\img\r4.jpg" />
+    <Content Include="file\img\r5.jpg" />
+    <Content Include="file\img\r6.jpg" />
+    <Content Include="file\img\r7.jpg" />
+    <Content Include="file\img\r8.jpg" />
+    <Content Include="file\img\r9.jpg" />
+    <Content Include="file\img\sd\c1.jpg" />
+    <Content Include="file\img\sd\c2.jpg" />
+    <Content Include="file\img\sd\c3.jpg" />
+    <Content Include="file\img\sd\c4.jpg" />
+    <Content Include="file\img\sd\c5.jpg" />
+    <Content Include="file\js\countdown.js" />
+    <Content Include="file\js\gmaps.min.js" />
+    <Content Include="file\js\ion.rangeSlider.js" />
+    <Content Include="file\js\jquery.ajaxchimp.min.js" />
+    <Content Include="file\js\jquery.magnific-popup.min.js" />
+    <Content Include="file\js\jquery.nice-select.min.js" />
+    <Content Include="file\js\jquery.sticky.js" />
+    <Content Include="file\js\main.js" />
+    <Content Include="file\js\nouislider.min.js" />
+    <Content Include="file\js\owl.carousel.min.js" />
+    <Content Include="file\js\parallax.min.js" />
+    <Content Include="file\js\vendor\bootstrap.min.js" />
+    <Content Include="file\js\vendor\jquery-2.2.4.min.js" />
+    <Content Include="file\js\vendor\popper.js" />
+    <Content Include="file\Karma Shop-doc\css\font-awesome.min.css" />
+    <Content Include="file\Karma Shop-doc\css\main.css" />
+    <Content Include="file\Karma Shop-doc\css\normalize.min.css" />
+    <Content Include="file\Karma Shop-doc\fonts\fontawesome-webfont.svg" />
+    <Content Include="file\Karma Shop-doc\img\logo.png" />
+    <Content Include="file\Karma Shop-doc\index.html" />
+    <Content Include="file\Karma Shop-doc\js\custom.js" />
+    <Content Include="file\Karma Shop-doc\js\jquery-1.11.0.min.js" />
+    <Content Include="file\Karma Shop-doc\js\jquery.nav.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shAutoloader.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushAS3.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushBash.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushCpp.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushCSharp.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushCss.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushDelphi.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushDiff.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushErlang.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushGroovy.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushJava.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushJScript.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushPerl.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushPhp.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushPlain.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushPython.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushRuby.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushSass.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushScala.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushSql.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushVb.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shBrushXml.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shCore.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\scripts\shLegacy.js" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shCore.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shCoreDefault.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shCoreDjango.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shCoreEclipse.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shCoreEmacs.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shCoreMDUltra.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shCoreMidnight.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shCoreRDark.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shThemeDefault.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shThemeDjango.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shThemeEclipse.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shThemeEmacs.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shThemeMDUltra.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shThemeMidnight.css" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\styles\shThemeRDark.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="file\css\.DS_Store" />
+    <Content Include="file\css\bootstrap.map" />
+    <Content Include="file\css\main.css.map" />
+    <Content Include="file\css\main.map" />
+    <Content Include="file\fonts\fontawesome-webfont.eot" />
+    <Content Include="file\fonts\fontawesome-webfont.ttf" />
+    <Content Include="file\fonts\fontawesome-webfont.woff" />
+    <Content Include="file\fonts\fontawesome-webfont.woff2" />
+    <Content Include="file\fonts\FontAwesome.otf" />
+    <Content Include="file\fonts\Linearicons-Free.eot" />
+    <Content Include="file\fonts\Linearicons-Free.ttf" />
+    <Content Include="file\fonts\Linearicons-Free.woff" />
+    <Content Include="file\fonts\Linearicons-Free.woff2" />
+    <Content Include="file\fonts\themify.eot" />
+    <Content Include="file\fonts\themify.ttf" />
+    <Content Include="file\fonts\themify.woff" />
+    <Content Include="file\img\.DS_Store" />
+    <Content Include="file\img\organic-food\.DS_Store" />
+    <Content Include="file\js\.DS_Store" />
+    <Content Include="file\Karma Shop-doc\.DS_Store" />
+    <Content Include="file\Karma Shop-doc\css\_DS_Store" />
+    <Content Include="file\Karma Shop-doc\fonts\fontawesome-webfont.eot" />
+    <Content Include="file\Karma Shop-doc\fonts\fontawesome-webfont.ttf" />
+    <Content Include="file\Karma Shop-doc\fonts\fontawesome-webfont.woff" />
+    <Content Include="file\Karma Shop-doc\fonts\FontAwesome.otf" />
+    <Content Include="file\Karma Shop-doc\fonts\_DS_Store" />
+    <Content Include="file\Karma Shop-doc\js\_DS_Store" />
+    <Content Include="file\Karma Shop-doc\syntax-highlighter\_DS_Store" />
+    <Content Include="file\Karma Shop-doc\_DS_Store" />
+    <Content Include="file\scss\.DS_Store" />
+    <Content Include="file\scss\main.scss" />
+    <Content Include="file\scss\theme\_banner.scss" />
+    <Content Include="file\scss\theme\_blog.scss" />
+    <Content Include="file\scss\theme\_common.scss" />
+    <Content Include="file\scss\theme\_contact.scss" />
+    <Content Include="file\scss\theme\_elements.scss" />
+    <Content Include="file\scss\theme\_footer.scss" />
+    <Content Include="file\scss\theme\_header.scss" />
+    <Content Include="file\scss\theme\_home.scss" />
+    <Content Include="file\scss\theme\_mixins.scss" />
+    <Content Include="file\scss\theme\_predefine.scss" />
+    <Content Include="file\scss\theme\_product.scss" />
+    <Content Include="file\scss\theme\_reset.scss" />
+    <Content Include="file\scss\theme\_variables.scss" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\Index2.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Login\.vs\Login\FileContentIndex\4919af68-4e30-402c-b32f-90099448be7d.vsidx" />
+    <Content Include="Views\Login\.vs\Login\FileContentIndex\read.lock" />
+    <Content Include="Views\Login\.vs\Login\v17\.suo" />
+    <Content Include="Views\Login\.vs\ProjectSettings.json" />
+    <Content Include="Views\Login\.vs\slnx.sqlite" />
+    <Content Include="Views\Login\.vs\VSWorkspaceState.json" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shop\Chuck1970.cshtml" />
+    <Content Include="Views\Shop\classic.cshtml" />
+    <Content Include="Views\Shop\JackPurcell.cshtml" />
+    <Content Include="Views\Shop\OneStar.cshtml" />
+    <Content Include="Views\Shop\Rubber.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62789</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44379/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
